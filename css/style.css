@@ -168,7 +168,7 @@ html.js .reveal.is-visible {
 
 .site-logo-img {
   display: block;
-  height: 48px;
+  height: 64px;
   width: auto;
 }
 
@@ -914,12 +914,23 @@ p {
 
 .footer-logo-img {
   flex: 0 0 auto;
-  width: 64px;
-  height: 64px;
+  width: 88px;
+  height: 88px;
   padding: 3px;
   background: var(--color-white);
   border-radius: 50%;
   box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.18);
+}
+
+.section-logo {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 32px;
+  padding: 4px;
+  background: var(--color-white);
+  border-radius: 50%;
+  box-shadow: var(--shadow-card);
 }
 
 .site-footer p {
