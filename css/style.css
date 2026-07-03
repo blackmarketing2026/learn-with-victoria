@@ -3,11 +3,17 @@
    ========================================================================== */
 
 :root {
-  --color-primary: #2b6777;
-  --color-accent: #c94f4f;
+  /* Learn with Victoria – Markenfarben */
+  --color-primary: #ee3224;   /* Scarlet Red */
+  --color-secondary: #c9a0dc; /* Wisteria */
+  --color-bg-alt: #e6d8f7;    /* Helles Pastell-Lila */
+  --color-accent: #d86bb5;    /* Pink */
   --color-text: #222222;
-  --color-bg: #ffffff;
-  --color-bg-alt: #f5f7f8;
+  --color-white: #ffffff;
+  --color-bg: var(--color-white);
+  --color-border: #d7c3ec;
+  --color-primary-hover: #c72a1d;
+
   --font-base: "Segoe UI", Arial, Helvetica, sans-serif;
   --max-width: 1100px;
 }
@@ -53,7 +59,7 @@ a:hover {
 
 .site-header {
   background: var(--color-bg-alt);
-  border-bottom: 1px solid #e2e6e8;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .site-header .container {
@@ -85,7 +91,7 @@ a:hover {
 
 .main-nav a:hover,
 .main-nav a[aria-current="page"] {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 /* --- Main content --------------------------------------------------------- */
@@ -110,13 +116,13 @@ main {
   display: inline-block;
   padding: 0.7rem 1.5rem;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-white);
   border-radius: 4px;
   font-weight: 600;
 }
 
 .btn:hover {
-  background: #204d59;
+  background: var(--color-primary-hover);
   text-decoration: none;
 }
 
@@ -124,11 +130,11 @@ main {
 
 .site-footer {
   background: var(--color-bg-alt);
-  border-top: 1px solid #e2e6e8;
+  border-top: 1px solid var(--color-border);
   padding: 1.5rem 0;
   font-size: 0.9rem;
   text-align: center;
-  color: #555;
+  color: var(--color-text);
 }
 
 .site-footer nav ul {
