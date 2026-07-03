@@ -1,0 +1,156 @@
+/* ==========================================================================
+   learn-with-victoria.de – Basis-Stylesheet
+   ========================================================================== */
+
+:root {
+  --color-primary: #2b6777;
+  --color-accent: #c94f4f;
+  --color-text: #222222;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f7f8;
+  --font-base: "Segoe UI", Arial, Helvetica, sans-serif;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-base);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* --- Header / Navigation ------------------------------------------------- */
+
+.site-header {
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid #e2e6e8;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.site-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.main-nav a:hover,
+.main-nav a[aria-current="page"] {
+  color: var(--color-primary);
+}
+
+/* --- Main content --------------------------------------------------------- */
+
+main {
+  min-height: 60vh;
+  padding: 2.5rem 0;
+}
+
+.hero {
+  padding: 3rem 0;
+  background: var(--color-bg-alt);
+  text-align: center;
+}
+
+.hero h1 {
+  margin-top: 0;
+  color: var(--color-primary);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background: #204d59;
+  text-decoration: none;
+}
+
+/* --- Footer ---------------------------------------------------------------- */
+
+.site-footer {
+  background: var(--color-bg-alt);
+  border-top: 1px solid #e2e6e8;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #555;
+}
+
+.site-footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+/* --- Responsive ------------------------------------------------------------ */
+
+@media (max-width: 640px) {
+  .site-header .container {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1rem;
+  }
+}
