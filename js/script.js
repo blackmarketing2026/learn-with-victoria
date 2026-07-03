@@ -1,6 +1,28 @@
 // learn-with-victoria.de
 
+document.documentElement.classList.add("js");
+
 document.addEventListener("DOMContentLoaded", () => {
+  const revealTargets = document.querySelectorAll(".reveal");
+
+  if (revealTargets.length && "IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+    );
+
+    revealTargets.forEach((target) => revealObserver.observe(target));
+  } else {
+    revealTargets.forEach((target) => target.classList.add("is-visible"));
+  }
+
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
 
   document.querySelectorAll(".main-nav a").forEach((link) => {
