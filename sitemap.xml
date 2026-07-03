@@ -25,16 +25,4 @@
     <priority>0.5</priority>
   </url>
 
-  <url>
-    <loc>https://www.learn-with-victoria.de/impressum.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
-
-  <url>
-    <loc>https://www.learn-with-victoria.de/datenschutz.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
-
 </urlset>
