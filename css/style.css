@@ -1071,6 +1071,158 @@ p {
   font-size: 0.78rem;
 }
 
+/* --- Facebook Lead-Ad Danke-Seite ------------------------------------------ */
+
+.thankyou-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 28px 0;
+}
+
+.thankyou-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 440px;
+  text-align: center;
+}
+
+.thankyou-logo {
+  display: inline-flex;
+  margin-bottom: 16px;
+}
+
+.thankyou-logo img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-card);
+}
+
+.thankyou-avatar {
+  width: 168px;
+  height: 168px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid var(--color-white);
+  box-shadow: var(--shadow-card);
+}
+
+.thankyou-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.thankyou-text {
+  max-width: 380px;
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+.button-huge {
+  width: 100%;
+  min-height: 68px;
+  margin-top: 8px;
+  padding: 18px 22px;
+  gap: 12px;
+  font-size: 1.15rem;
+}
+
+.thankyou-cta-icon {
+  display: inline-grid;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.22);
+  font-size: 0.8rem;
+}
+
+.thankyou-steps {
+  width: 100%;
+  margin-top: 32px;
+  padding: 22px;
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+
+.thankyou-steps-title {
+  margin: 0 0 14px;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.thankyou-steps ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.thankyou-steps li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+
+.thankyou-steps li span {
+  display: inline-grid;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--color-blue-light);
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+.thankyou-credential {
+  max-width: 380px;
+  margin-top: 24px;
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 0.88rem;
+}
+
+.thankyou-footer {
+  padding: 8px 0 28px;
+  text-align: center;
+}
+
+.thankyou-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.thankyou-footer a {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* --- Responsive ------------------------------------------------------------------------------------ */
 
 @media (min-width: 700px) {
