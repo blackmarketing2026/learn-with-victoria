@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/facebook-lead-ad-danke", "destination": "/facebook-lead-ad-danke.html" }
+  ]
+}
