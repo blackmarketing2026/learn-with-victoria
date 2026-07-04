@@ -33,8 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  const isRussian = document.documentElement.lang === "ru";
+
   const whatsappNumber = "4917687841204";
-  const whatsappMessage = "Hallo Victoria, ich interessiere mich für Englischunterricht und möchte gerne mehr erfahren.";
+  const whatsappMessage = isRussian
+    ? "Здравствуйте, Виктория! Меня интересуют уроки английского, хотелось бы узнать подробнее."
+    : "Hallo Victoria, ich interessiere mich für Englischunterricht und möchte gerne mehr erfahren.";
   const encodedMessage = encodeURIComponent(whatsappMessage);
   const whatsappUrl = whatsappNumber
     ? `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
@@ -61,23 +65,38 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault();
 
     const data = new FormData(form);
-    const lines = [
-      `Name: ${data.get("Name") || ""}`,
-      `E-Mail: ${data.get("E-Mail") || ""}`,
-      `Telefon / WhatsApp: ${data.get("Telefon / WhatsApp") || ""}`,
-      `Aktuelles Englischlevel: ${data.get("Aktuelles Englischlevel") || ""}`,
-      `Wunschziel: ${data.get("Wunschziel") || ""}`,
-      "",
-      "Nachricht:",
-      data.get("Nachricht") || ""
-    ];
+    const lines = isRussian
+      ? [
+          `Имя: ${data.get("Name") || ""}`,
+          `Эл. почта: ${data.get("E-Mail") || ""}`,
+          `Телефон / WhatsApp: ${data.get("Telefon / WhatsApp") || ""}`,
+          `Уровень английского: ${data.get("Aktuelles Englischlevel") || ""}`,
+          `Желаемая цель: ${data.get("Wunschziel") || ""}`,
+          "",
+          "Сообщение:",
+          data.get("Nachricht") || ""
+        ]
+      : [
+          `Name: ${data.get("Name") || ""}`,
+          `E-Mail: ${data.get("E-Mail") || ""}`,
+          `Telefon / WhatsApp: ${data.get("Telefon / WhatsApp") || ""}`,
+          `Aktuelles Englischlevel: ${data.get("Aktuelles Englischlevel") || ""}`,
+          `Wunschziel: ${data.get("Wunschziel") || ""}`,
+          "",
+          "Nachricht:",
+          data.get("Nachricht") || ""
+        ];
 
-    const subject = encodeURIComponent("Anfrage für Englischunterricht");
+    const subject = encodeURIComponent(
+      isRussian ? "Заявка на уроки английского" : "Anfrage für Englischunterricht"
+    );
     const body = encodeURIComponent(lines.join("\n"));
     window.location.href = `mailto:info@learn-with-victoria.de?subject=${subject}&body=${body}`;
 
     if (status) {
-      status.textContent = "Dein E-Mail-Programm wird geöffnet. Danke für deine Anfrage.";
+      status.textContent = isRussian
+        ? "Сейчас откроется ваша почтовая программа. Спасибо за заявку."
+        : "Dein E-Mail-Programm wird geöffnet. Danke für deine Anfrage.";
     }
   });
 });
